@@ -39,13 +39,15 @@ Sex, Age, Education, IQ
 
 ## **Algorithms and analysis**
 ### *Random forest/Gradient boosting -* 
-will be used to evaluate feature importance. 
+Will be used to evaluate feature importance. 
 ### *Graph Attention Networks* - 
-the GAN allows dynamical learning of importance of connections in the dataset, this is crucial in my dataset as EEG data has a spatial dimension which may reveal valuable insight into my problem. 
+The GAN allows dynamical learning of importance of connections in the dataset, this is crucial in my dataset as EEG data has a spatial dimension which may reveal valuable insight into my problem. 
 The GAN will require hyperparameter tuning as it is highly sensitive to the choice of parameters.
 ### *Principle Component Analysis* - 
-A simple PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
-The PCA will be used as a secondary comparison/evaluation of the other two algorithms.
+A dimensionality reduction algorithm; PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
+The PCA will be used as a secondary comparison/evaluation of the other two algorithms and provide additional clustering capabilities.
+### *Hypertuning*
+Hypertuning - Hypertuning (with random search) will be performed for each model to improve optimal parameter space.
 
 ## **Evaluation Metrics**
 Accuracy, F1 score, Roc-AUC, confusion matrix.
