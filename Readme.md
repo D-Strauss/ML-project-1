@@ -47,7 +47,7 @@ The GAN will require hyperparameter tuning as it is highly sensitive to the choi
 A dimensionality reduction algorithm; PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
 The PCA will be used as a secondary comparison/evaluation of the other two algorithms and provide additional clustering capabilities.
 ### *Hypertuning*
-Hypertuning - Hypertuning (with random search) will be performed for each model to improve optimal parameter space.
+Hypertuning - Hypertuning (with random search) will be performed for each model to improve optimal parameter selection.
 
 ## **Evaluation Metrics**
 Accuracy, F1 score, Roc-AUC, confusion matrix.
