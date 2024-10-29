@@ -16,22 +16,22 @@ n = 945,
 ###*Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
 ###*Secondary features:* 171 coherence values over 6 frequency bands = 1026 columns in total. The secondary features will not be used if the analysis becomes to challenging. 
 
-***Aggregate features*:** 
-*PSD*
+##***Aggregate features*:** 
+###*PSD*
 - Regional aggregation of PSD across each frequency band,
 - Regional aggregation of mean summed PSD, showing the overall spectral activation.
 - Power ratios between different frequency bands
-*Coherence*
+###*Coherence*
 - Intra regional coherence - calculating the mean coherence of all electrode pair in the region.
 - inter regional coherence - calculate region based coherence values to compare with other regions.
 - Edge weights - from thresholded coherence values, for the GAN.
-*Connectivity/Network analysis*
+###*Connectivity/Network analysis*
 - Degree and Strength - Metrics to evaluate connectivity between different electrodes
 - Networks - Dividing the coherence metrics into regions to observe network connectivity.
 
-**Algorithms and analysis**
-*Random forest/Gradient boosting -* will be used to evaluate feature importance. 
-*Graph Attention Networks* - the GAN allows dynamical learning of importance of connections in the dataset, this is crucial in my dataset as EEG data has a spatial dimension which may reveal valuable insight into my problem. 
+##**Algorithms and analysis**
+###*Random forest/Gradient boosting -* will be used to evaluate feature importance. 
+###*Graph Attention Networks* - the GAN allows dynamical learning of importance of connections in the dataset, this is crucial in my dataset as EEG data has a spatial dimension which may reveal valuable insight into my problem. 
 The GAN will require hyperparameter tuning as it is highly sensitive to the choice of parameters.
-*Principle Component Analysis* - A simple PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
+###*Principle Component Analysis* - A simple PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
 The PCA will be used as a secondary comparison/evaluation of the other two algorithms.
