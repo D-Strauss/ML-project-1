@@ -4,7 +4,7 @@
 Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. 
 Furthermore, objective biomarkers for psychiatric diagnostics is currently not exercised in practice. This AI project will attempt to predict six types of psychiatric diagnosis based on electroencephalography resting state data. 
 The problem is a classification/clustering problem in its nature. I will be using supervised learning, deep learning and dimensionality reduction to investigate, interpret and predict my dataset.
-Each psychiatric diagnosis will be treated as a separate object
+Each psychiatric diagnosis will be treated as a separate object.
 
 ## **Dataset:** 
 ### *Description of dataset:* 
