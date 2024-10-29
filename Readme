@@ -11,7 +11,7 @@ The quality of data is good but it contains 15 NaNs in a descriptive statistics 
 n = 945, 
 *labels* =  Schizophrenia(1), Mood Disoder (2), Trauma and Stress (3), Addictive disorder (4), Obsessive Compulsive Disorder (5) , Healthy Control (6). 
 
-***Features*:**  
+***Features:***  
 *Descriptive statistics:* Sex, Age, Education, IQ
 *Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
 *Secondary features:* 171 coherence values over 6 frequency bands = 1026 columns in total. The secondary features will not be used if the analysis becomes to challenging. 
