@@ -4,6 +4,7 @@
 Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. 
 Furthermore, objective biomarkers for psychiatric diagnostics is currently not exercised in practice. This AI project will attempt to predict six types of psychiatric diagnosis based on electroencephalography resting state data. 
 The problem is a classification/clustering problem in its nature. I will be using supervised learning, deep learning and dimensionality reduction to investigate, interpret and predict my dataset.
+Each psychiatric diagnosis will be treated as a separate object
 
 ## **Dataset:** 
 ### *Description of dataset:* 
@@ -24,9 +25,10 @@ Sex, Age, Education, IQ
 
 ## ***Aggregate features*:** 
 ### *PSD*
-- Regional aggregation of PSD across each frequency band,
+- Regional aggregation of PSD across each frequency band. Regional, in the context, refers to a brain lobes.
 - Regional aggregation of mean summed PSD, showing the overall spectral activation.
-- Power ratios between different frequency bands
+- Power ratios between different frequency bands.
+- PSD-based connectivity - quantifies the correlation between electrode pair across frequency bands. Will be used as a backup aggregate feature if the coherence metrics becomes to exhaustive.
 ### *Coherence*
 - Intra regional coherence - calculating the mean coherence of all electrode pair in the region.
 - inter regional coherence - calculate region based coherence values to compare with other regions.
@@ -44,3 +46,6 @@ The GAN will require hyperparameter tuning as it is highly sensitive to the choi
 ### *Principle Component Analysis* - 
 A simple PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
 The PCA will be used as a secondary comparison/evaluation of the other two algorithms.
+
+## **Evaluation Metrics**
+Accuracy, F1 score, Roc-AUC, confusion matrix.
