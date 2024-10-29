@@ -1,20 +1,20 @@
-**AI Project – Predicting Psychiatric Diagnosis from EEG Resting State Data**
+#**AI Project – Predicting Psychiatric Diagnosis from EEG Resting State Data**
 
-**Problem:** Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. 
+##**Problem:** Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. 
 Furthermore, objective biomarkers for psychiatric diagnostics is currently not exercised in practice. This AI project will attempt to predict six types of psychiatric diagnosis based on electroencephalography resting state data. 
 The problem is a classification/clustering problem in its nature. I will be using supervised learning, deep learning and dimensionality reduction to investigate, interpret and predict my dataset.
 
-**Dataset:** 
-*Description of dataset:* Dataset with a total of 1201 columns, containing power spectrum density measures (114 columns) and coherence metrics (1026 columns). 
+##**Dataset:** 
+###*Description of dataset:* Dataset with a total of 1201 columns, containing power spectrum density measures (114 columns) and coherence metrics (1026 columns). 
 The data does not contain a time-series which simplifies the analysis and the PSD and coherence metrics are already a aggregate measure in themselves. 
 The quality of data is good but it contains 15 NaNs in a descriptive statistics column(which has minor importance for my analysis). I will have to consider how to deal with the NaNs in the optimal manner.
 n = 945, 
-*labels* =  Schizophrenia(1), Mood Disoder (2), Trauma and Stress (3), Addictive disorder (4), Obsessive Compulsive Disorder (5) , Healthy Control (6). 
+###*labels* =  Schizophrenia(1), Mood Disoder (2), Trauma and Stress (3), Addictive disorder (4), Obsessive Compulsive Disorder (5) , Healthy Control (6). 
 
-***Features:***  
-*Descriptive statistics:* Sex, Age, Education, IQ
-*Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
-*Secondary features:* 171 coherence values over 6 frequency bands = 1026 columns in total. The secondary features will not be used if the analysis becomes to challenging. 
+##***Features:***  
+###*Descriptive statistics:* Sex, Age, Education, IQ
+###*Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
+###*Secondary features:* 171 coherence values over 6 frequency bands = 1026 columns in total. The secondary features will not be used if the analysis becomes to challenging. 
 
 ***Aggregate features*:** 
 *PSD*
