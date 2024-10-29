@@ -13,7 +13,9 @@ n = 945,
 
 ##***Features:***  
 ###*Descriptive statistics:* Sex, Age, Education, IQ
+
 ###*Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
+
 ###*Secondary features:* 171 coherence values over 6 frequency bands = 1026 columns in total. The secondary features will not be used if the analysis becomes to challenging. 
 
 ##***Aggregate features*:** 
