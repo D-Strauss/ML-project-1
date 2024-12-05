@@ -23,11 +23,11 @@ Due to the very complex nature of EEG data, i decided to use the power of AI to 
 
 *Random forest/Gradient boosting -*   To evaluate feature importance. 
 
-Multilayer Perceptron - Deep learning model to analyze both aggregate feature and the full dataset.
+Multilayer Perceptron - Deep learning model to analyze both aggregate features and the full dataset.
 
-*Principle Component Analysis* - Will be used for dimensionality reduction.
+*Principle Component Analysis* - performed for dimensionality reduction.
 
-*Hypertuning -* Hypertuning (with random search) will be performed to improve optimal parameter space.
+*Hypertuning -* Hypertuning (with gridsearch) performed to improve optimal parameter space.
 
 *K-means clustering -* To observe if the patterns discerned by the MLP can identify the groups effectively.
 
