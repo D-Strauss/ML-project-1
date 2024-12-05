@@ -2,6 +2,9 @@
 
 **Problem:** Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. There are currently no well defined objective electroencephalographical biomarkers for the diagnosis of schizophrenia. This AI project will attempt to predict schizophrenia from healthy control  based on electroencephalography resting state data. This may aid in future diagnosis of schizophrenia based on EEG characteristics. I will be using supervised learning, unsupervised, deep learning and dimensionality reduction to investigate, interpret and predict my dataset. 
 
+**Approach**
+Due to the very complex nature of EEG data, i decided to use the power of AI to explore the most possible directions in the analysis and model training. This means that most of the code is generated with ChatGPT, however, i have gone through the code carefully and am happy to make a presentation to further detail my analysis.
+
 **Dataset:** 
 
 *Description of the dataset:* The dataset is power spectrum density (an aggregate of electrical activity that has been recorded in the brain). a subset of the dataset was used, featuring a total of 116 columns featuring 19 electrodes and 6 frequency bands.  
