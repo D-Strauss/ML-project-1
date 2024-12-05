@@ -7,7 +7,7 @@
 *Description of the dataset:* The dataset is power spectrum density (an aggregate of electrical activity that has been recorded in the brain). a subset of the dataset was used, featuring a total of 116 columns featuring 19 electrodes and 6 frequency bands.  
 ***n* = 212, Schizophrenia(117), Healthy Control(95)
 
-*labels* Schizophrenia(1), Healthy Control (0). 
+*labels* = Schizophrenia(1), Healthy Control (0). 
 ***Features*:**  
 *Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
 ***Aggregate features/Feature selection*:** 
