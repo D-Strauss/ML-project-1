@@ -21,7 +21,7 @@ Due to the very complex nature of EEG data, i decided to use the power of AI to 
 
 **Algorithms and analysis**
 
-*Random forest/Gradient boosting -*   To evaluate feature importance. 
+*Random forest/Gradient boosting -*  To evaluate feature importance. 
 
 Multilayer Perceptron - Deep learning model to analyze both aggregate features and the full dataset.
 
