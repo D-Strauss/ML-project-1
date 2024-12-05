@@ -7,7 +7,7 @@ Due to the very complex nature of EEG data, i decided to use the power of AI to 
 
 **Dataset:** 
 
-*Description of the dataset:* The dataset is power spectrum density (an aggregate of electrical activity that has been recorded in the brain). a subset of the dataset was used, featuring a total of 116 columns featuring 19 electrodes and 6 frequency bands.  
+*Description of the dataset:* The dataset contains the aggregate metric of power spectral density from electrical activity that has been recorded from the brain. a subset of the dataset was used for the analysis, featuring a total of 116 columns, 19 electrodes and 6 frequency bands, focusing on the difference between schizophrenia and healthy control.
 ***n* = 212, Schizophrenia(117), Healthy Control(95)
 
 *labels* = Schizophrenia(1), Healthy Control (0). 
