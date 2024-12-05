@@ -1,53 +1,38 @@
-# **AI Project – Predicting Psychiatric Diagnosis from EEG Resting State Data**
+# **AI Project – Predicting Schizophrenia from EEG Resting State Data**
 
-## **Problem:** 
-Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. 
-Furthermore, objective biomarkers for psychiatric diagnostics is currently not exercised in practice. This AI project will attempt to predict six types of psychiatric diagnosis based on electroencephalography resting state data. 
-The problem is a classification/clustering problem in its nature. I will be using supervised learning, deep learning and dimensionality reduction to investigate, interpret and predict my dataset.
-Each psychiatric diagnosis will be treated as a separate object.
+**Problem:** Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. There are currently no well defined objective biomarkers for the diagnosis of schizophrenia. This AI project will attempt to predict schizophrenia from healthy control  based on electroencephalography resting state data. This may aid in future diagnosis of schizophrenia based on EEG characteristics. I will be using supervised learning, unsupervised, deep learning and dimensionality reduction to investigate, interpret and predict my dataset. 
 
-## **Dataset:** 
-### *Description of dataset:* 
-Dataset with a total of 1201 columns, containing power spectrum density measures (114 columns) and coherence metrics (1026 columns). 
-The data does not contain a time-series which simplifies the analysis and the PSD and coherence metrics are already a aggregate measure in themselves. 
-The quality of data is good but it contains 15 NaNs in a descriptive statistics column(which has minor importance for my analysis). I will have to consider how to deal with the NaNs in the optimal manner.
-n = 945, 
-### *labels* =  
-Schizophrenia(1), Mood Disoder (2), Trauma and Stress (3), Addictive disorder (4), Obsessive Compulsive Disorder (5) , Healthy Control (6). 
+**Dataset:** 
 
-## ***Features:***  
-### *Descriptive statistics:* 
-Sex, Age, Education, IQ
-### *Main feature:* 
-19 electrodes with 6 frequency bands each = 114 columns in total.
-### *Secondary features:* 
-171 coherence values over 6 frequency bands = 1026 columns in total. The secondary features will not be used if the analysis becomes to challenging. 
+*Description of the dataset:* The dataset is power spectrum density (an aggregate of electrical activity that has been recorded in the brain). a subset of the dataset was used, featuring a total of 116 columns featuring 19 electrodes and 6 frequency bands.  ** 
+*****n* = 212, Schizophrenia(117), Healthy Control(95)
 
-## ***Aggregate features*:** 
-### *PSD*
-- Regional aggregation of PSD across each frequency band. Regional, in the context, refers to a brain lobes.
-- Regional aggregation of mean summed PSD, showing the overall spectral activation.
-- Power ratios between different frequency bands.
-- PSD-based connectivity - quantifies the correlation between electrode pair across frequency bands. Will be used as a backup aggregate feature if the coherence metrics becomes to exhaustive.
-### *Coherence*
-- Intra regional coherence - calculating the mean coherence of all electrode pair in the region.
-- inter regional coherence - calculate region based coherence values to compare with other regions.
-- Edge weights - from thresholded coherence values, for the GAN.
-### *Connectivity/Network analysis*
-- Degree and Strength - Metrics to evaluate connectivity between different electrodes
-- Networks - Dividing the coherence metrics into regions to observe network connectivity.
+*labels* Schizophrenia(1), Healthy Control (0). 
+***Features*:**  
+*Main feature:* 19 electrodes with 6 frequency bands each = 114 columns in total.
+***Aggregate features/Feature selection*:** 
 
-## **Algorithms and analysis**
-### *Random forest/Gradient boosting -* 
-Will be used to evaluate feature importance. 
-### *Graph Attention Networks* - 
-The GAN allows dynamical learning of importance of connections in the dataset, this is crucial in my dataset as EEG data has a spatial dimension which may reveal valuable insight into my problem. 
-The GAN will require hyperparameter tuning as it is highly sensitive to the choice of parameters.
-### *Principle Component Analysis* - 
-A dimensionality reduction algorithm; PCA can be used directly on the 19x6 grid which will preserve the spatial and frequency patternts that are contained within the matrix. 
-The PCA will be used as a secondary comparison/evaluation of the other two algorithms and provide additional clustering capabilities.
-### *Hypertuning*
-Hypertuning - Hypertuning (with random search) will be performed for each model to improve optimal parameter selection.
+- Regional (brain lobes) aggregation of mean summed PSD, showing the overall spectral activation.
+- Power ratios of amplitude between different frequency bands for each electrode.
+- Power ratios of amplitude between different frequency band and brain lobe
 
-## **Evaluation Metrics**
-Accuracy, F1 score, Roc-AUC, confusion matrix.
+**Algorithms and analysis**
+
+*Random forest/Gradient boosting -*   To evaluate feature importance. 
+
+Multilayer Perceptron - Deep learning model to analyze both aggregate feature and the full dataset.
+
+*Principle Component Analysis* - Will be used for dimensionality reduction.
+
+*Hypertuning -* Hypertuning (with random search) will be performed to improve optimal parameter space.
+
+*K-means clustering -* To observe if the patterns discerned by the MLP can identify the groups effectively.
+
+*Logistic regression* **-** To get a reference from the random forest model and understand better the relationship between the feature and target. Furthermore logistic regression is less prone to overfitting which was observed in the Random forest.
+
+**Evaluation Metrics**
+
+Accuracy, F1 score, Roc-AUC, confusion matrix. 
+
+**!Important! 
+You will need the dataset which is uploaded in the repository.**
