@@ -1,6 +1,6 @@
 # **AI Project – Predicting Schizophrenia from EEG Resting State Data**
 
-**Problem:** Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. There are currently no well defined objective biomarkers for the diagnosis of schizophrenia. This AI project will attempt to predict schizophrenia from healthy control  based on electroencephalography resting state data. This may aid in future diagnosis of schizophrenia based on EEG characteristics. I will be using supervised learning, unsupervised, deep learning and dimensionality reduction to investigate, interpret and predict my dataset. 
+**Problem:** Evaluating psychiatric diagnosis is a challenging, costly and time-consuming endeavor. There are currently no well defined objective EEG biomarkers for the diagnosis of schizophrenia. This AI project will attempt to predict schizophrenia from healthy control  based on electroencephalography resting state data. This may aid in future diagnosis of schizophrenia based on EEG characteristics. I will be using supervised learning, unsupervised, deep learning and dimensionality reduction to investigate, interpret and predict my dataset. 
 
 **Dataset:** 
 
